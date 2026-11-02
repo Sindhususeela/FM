@@ -1,18 +1,18 @@
 # FM
 
-EXP NO: 4	GENERATION AND DETECTION OF FM
+## EXP NO: 4	GENERATION AND DETECTION OF FM
 
 
-AIM:
+## AIM:
 To write a program for Frequency Modulation and Demodulation using SCILAB and to observe and measure the frequency deviation and the modulation index of FM.
 
 
-EQUIPMENTS REQUIRED
+## EQUIPMENTS REQUIRED
 
 •	Computer with i3 Processor
 •	SCI LAB
 
-THEORY:
+## THEORY:
 
 Frequency modulation is a type of modulation in which the frequency of the high frequency (carrier) is varied in accordance with the instantaneous value of the modulating signal.
 FREQUENCY DEVIATION f and MODULATION INDEX m f :
@@ -48,7 +48,7 @@ Algorithm
 
 
 
-PROCEDURE
+## PROCEDURE
 
 
 •	Refer Algorithms and write code for the experiment.
@@ -59,25 +59,54 @@ PROCEDURE
 •	If any Error, correct it in code and execute again
 Verify the generated waveform using Tabulation and Model Waveform
 
-MODEL GRAPH:
+## MODEL GRAPH:
 
 <img width="512" height="365" alt="image" src="https://github.com/user-attachments/assets/acd787bd-5281-4f1b-802f-1aa39fac9189" />
 
 
-Program
+## Program
+
+Am=2.59;
+
+Ac=1.8*Am;
+
+fm=328;
+
+fc=10*fm;
+
+fs=10*fc;
+
+b=3.26;
+
+t=0:1/fs:2/fm;
+
+em=Am*sin(2*3.14*fm*t);
+
+ec=Ac*cos(2*3.14*fc*t);
+
+eFm=Ac.*cos(2*3.14*fc*t + b*sin(2*3.14*fm*t));
+
+subplot(3,1,1);
+
+plot(t,em);
+
+subplot(3,1,2);
+
+plot(t,ec);
+
+subplot(3,1,3);
+
+plot(t,eFm);
+
+## Output Waveform
+<img width="1600" height="850" alt="image" src="https://github.com/user-attachments/assets/ecc5ff23-e898-491b-80e5-ae1f1e51da63" />
 
 
-Output Waveform
+## Tabulation
+<img width="1600" height="824" alt="image" src="https://github.com/user-attachments/assets/beabc2aa-6085-4cef-aaa7-4a32d068bcee" />
 
 
-
-Tabulation
-
-
-
-Calculation
-
-
+## Calculation
 
 Frequency Deviation Practical = 
 
@@ -85,9 +114,7 @@ Modulation Index Practical	=
 
 Modulation Index Theoretical	=
 
-
-
-RESULT:
+## RESULT:
 
 Thus, the frequency modulation and demodulation is successfully done and the output is experimentally verified.
 
